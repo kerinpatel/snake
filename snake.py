@@ -91,7 +91,7 @@ def go_left():
         snake_direction = "left"
 
 
-pen_reset = None  # Declare pen_reset as a global variable
+pen_reset = None  
 
 def reset():
     global snake, snake_direction, food_pos, pen_score, pen_timer, pen_game_over, pen_reset, pen_made_by, score, food, start_time, snake_speed
@@ -101,12 +101,12 @@ def reset():
     food.goto(food_pos)
     score = 0
     start_time = time.time()
-    snake_speed = 1  # Increase snake speed after restart
+    snake_speed = 1  
     update_score()
     update_timer()
     pen_game_over.clear()
     
-    # Check if pen_reset is not None before clearing
+   
     if pen_reset is not None:
         pen_reset.clear()
     
